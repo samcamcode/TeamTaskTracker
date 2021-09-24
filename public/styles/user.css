@@ -1,0 +1,57 @@
+.user-container {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.todo-input {
+    display: flex;
+    margin-top: 50px;
+    /* width: 100%; */
+}
+
+.todo-value {
+    font-size: 16px;
+    padding: 10px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    /* width: 100%; */
+}
+
+.btn {
+    margin-left: 10px;
+    padding: 5px;
+    /*  */
+	/* color:#ffffff; */
+    border-radius:5px;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:19px;
+}
+
+.add-btn {
+    background-color: #4267b2;
+}
+
+.todo-btn {
+    margin-left: 5px;
+}
+
+.delete-todo {
+    background-color: red;
+    border-radius: 5px;
+}
+
+.edit-todo, .edit-btn {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.list {
+    margin-top: 50px;
+}
