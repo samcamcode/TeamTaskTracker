@@ -15,7 +15,7 @@ const userSchema = new Schema({
                 type: Schema.Types.ObjectId,
                 ref: 'User'
             },
-            CreatedBy: {
+            createdBy: {
                 type: Schema.Types.ObjectId,
                 ref: 'User'
             }
@@ -23,4 +23,18 @@ const userSchema = new Schema({
     ]
 })
 
-module.exports = mongoose.model('User', taskSchema)
+module.exports = mongoose.model('User', userSchema);
+
+
+
+// "_id" : ObjectId("61556faf1cb8b81fac95c601"),
+// "name" : "Samuel"
+
+// "_id" : ObjectId("61556faf1cb8b81fac95c602"),
+// "name" : "Camacho"
+
+// "_id" : ObjectId("61556faf1cb8b81fac95c603"),
+// "name" : "SamCam"
+
+// "_id" : ObjectId("61556faf1cb8b81fac95c6014"),
+// "name" : "admin"
