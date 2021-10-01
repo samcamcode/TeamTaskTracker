@@ -5,7 +5,7 @@ const userSchema = new Schema({
     name: String,
     email: String,
     password: String,
-    tasks: [
+    taskList: [
         {
             task: {
                 type: Schema.Types.ObjectId,
@@ -27,14 +27,14 @@ module.exports = mongoose.model('User', userSchema);
 
 
 
-// "_id" : ObjectId("61556faf1cb8b81fac95c601"),
+// "_id" : ObjectId("6156a55ece2a79fd364a33fb"),
 // "name" : "Samuel"
 
-// "_id" : ObjectId("61556faf1cb8b81fac95c602"),
+// "_id" : ObjectId("6156a55ece2a79fd364a33fc"),
 // "name" : "Camacho"
 
-// "_id" : ObjectId("61556faf1cb8b81fac95c603"),
+// "_id" : ObjectId("6156a55ece2a79fd364a33fd"),
 // "name" : "SamCam"
 
-// "_id" : ObjectId("61556faf1cb8b81fac95c6014"),
+// "_id" : ObjectId("6156a55ece2a79fd364a33fe"),
 // "name" : "admin"

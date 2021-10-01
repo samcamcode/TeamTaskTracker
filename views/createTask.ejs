@@ -1,0 +1,14 @@
+<% layout('layouts/boilerplate') %> 
+
+<form action="" method="post">
+    <label for="task">Task</label>
+    <input type="text" name="task" id="task">
+    <label for="assign">Assign To</label>
+    <select name="users" id="users">
+        <% for (let user of users) {%> 
+            <option value="<%= user._id %>"><%= user.name %></option>    
+        <% } %> 
+    </select>
+    <button class="form-btn">Create Task</button>
+</form>
+

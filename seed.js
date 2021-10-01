@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const {inspect} = require('util');
 const Task = require('./models/taskschema');
 const User = require('./models/userschema');
 
@@ -11,80 +12,45 @@ db.once('open', () => {
     console.log('database connection!')
 })
 
-
-const findTask = async () => {
-    const task = await (await (await Task.findById('61555d912c36ff8f5f60acdd')).populate('createdBy')).populate('assignedTo');
-    console.log(task)
-    console.log(task.task)
-    console.log(task.createdBy.name)
-    console.log(task.assignedTo.name)
+const user = async() => {
+    const users = await User.find({})
+    console.log(users)
 }
+
+user()
+
+// const findTask = async() => {
+//     const task = await Task.findById('6156a7f9cc0aa2efa56c7011').populate('createdBy')
+//     console.log(task)
+// }
 // findTask()
 
-// const findUser = async() => {
-//     const user = await (await User.findById('615558c78ccb77fe75e54e2c'))
-//     .populate({
-//         path: 'tasks.task',
-//         model: 'User',
-//         populate:{
-//             path:'createdBy',
-//             model: 'Task'
-//         }
-//     })
-//     // const user = await User.findById('615558c78ccb77fe75e54e2c')
-//     // const obj = {
-//     //     task: '61555d912c36ff8f5f60acdd',
-//     //     assignedBy: '615558c78ccb77fe75e54e2d',
-//     //     createdBy: '615558c78ccb77fe75e54e2d'
-//     // }
-//     // user.tasks.push(obj);
-//     // user.save()
-//     console.log(user)
+// const findUser = async () => {
+//     const user = await User.findById('6156a55ece2a79fd364a33fd').
+//     populate('taskList.task')
+//     console.log(inspect(user, {depth:null}))
 // }
 // findUser()
 
-
-// const task1 = () => {
-//     const task = new Task({
-//         task: 'created by samuel for samuel',
-//         createdBy: '615558c78ccb77fe75e54e2a',
-//         assignedTo: '615558c78ccb77fe75e54e2a'
+// const createTask = async() => {
+//     const newTask = await new Task({
+//         task: 'now lets see if this works',
+//         createdBy: '6156a55ece2a79fd364a33fe',
+//         assignedTo: '6156a55ece2a79fd364a33fd'
 //     })
-//     task.save();
+//     const user = await User.findById('6156a55ece2a79fd364a33fd');
+//     const taskObj = {
+//         task: newTask._id,
+//         assignedBy: newTask.createdBy,
+//         createdBy: newTask.createdBy
+//     }
+//     user.taskList.push(taskObj);
+//     user.save()
+//     newTask.save()
+//     console.log(user)
+//     console.log(newTask)
 // }
-
-// const task2 = () => {
-//     const task = new Task({
-//         task: 'created by camacho for samuel',
-//         createdBy: '615558c78ccb77fe75e54e2b',
-//         assignedTo: '615558c78ccb77fe75e54e2a'
-//     })
-//     task.save();
-// }
-
-// const task3 = () => {
-//     const task = new Task({
-//         task: 'created by admin for samcam',
-//         createdBy: '615558c78ccb77fe75e54e2d',
-//         assignedTo: '615558c78ccb77fe75e54e2c'
-//     })
-//     task.save();
-// }
-
-// const task4 = () => {
-//     const task = new Task({
-//         task: 'created by admin for admin',
-//         createdBy: '615558c78ccb77fe75e54e2d',
-//         assignedTo: '615558c78ccb77fe75e54e2d'
-//     })
-//     task.save();
-// }
-
-// task1()
-// task2()
-// task3()
-// task4()
-
+// createTask()
 
 // const user1 = () => {
 //     const user = new User({

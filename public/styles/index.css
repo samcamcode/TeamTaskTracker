@@ -49,6 +49,28 @@ SECTION {
     box-shadow: 0 19px 39px 0 rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
+/* forms */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.form-btn {
+    margin-top: 10px;
+    padding: 10px;
+}
 
 /* FOOTER */
 .footer {
