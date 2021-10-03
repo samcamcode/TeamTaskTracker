@@ -5,7 +5,7 @@
     <div class="todo-input">
         <input type="text" name="todo" class="todo-value" id="todo" placeholder="What do I need to do?">
         <input type="button" class="btn edit-btn hide" value="Edit">
-        <input type="button" class="btn add-btn" value="Add Todo">
+        <input type="button" class="btn add-btn" value="Add Task">
     </div>
     <div class="list">
         <div class="list-heading">
@@ -18,6 +18,15 @@
             <input type="button" class="btn todo-btn edit-todo" value="Edit">
             <input type="button" class="btn todo-btn delete-todo" value="Delete">
         </div>
+        <% for (let item of tasks) {%> 
+            <div class="each-todo">
+                <span class="todo-item"><%= item.task %></span>
+                <input type="button" class="btn todo-btn edit-todo" value="Edit">
+                <input type="button" class="btn todo-btn delete-todo" value="Delete">
+            </div>
+        <% } %> 
     </div>
 </div>
+
+
 
